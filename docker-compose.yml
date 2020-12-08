@@ -1,0 +1,26 @@
+version: "3.0"
+services:
+    haproxy:
+        image: haproxy:2.3.2-alpine
+        command: sh -c "apk add --no-cache curl && mkdir /var/lib/haproxy && haproxy -f /usr/local/etc/haproxy/haproxy.cfg"
+        volumes:
+            - "./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
+        ports:
+            - target: 80
+              published: 8080
+              protocol: tcp
+              mode: host
+
+    service1:
+        image: golang:1.15.6-buster
+        working_dir: /service
+        command: sh -c "go run main.go"
+        volumes:
+            - "./service1_folder:/service"
+
+    service2:
+        image: golang:1.15.6-buster
+        working_dir: /service
+        command: sh -c "go run main.go"
+        volumes:
+            - "./service2_folder:/service"
