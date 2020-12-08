@@ -57,3 +57,8 @@ hello from service1!
 ```
 hello from service2!
 ```
+
+## References
+* <https://www.haproxy.com/blog/haproxy-on-docker-swarm-load-balancing-and-dns-service-discovery/>: Docker Swarm + Haproxy
+* <https://www.haproxy.com/blog/whats-new-haproxy-1-8/>: `server-template`
+* <https://www.haproxy.com/blog/dns-service-discovery-haproxy/>: `resolvers` section in `haproxy.cfg`
