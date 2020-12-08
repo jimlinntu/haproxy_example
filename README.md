@@ -57,6 +57,7 @@ hello from service1!
 ```
 hello from service2!
 ```
+* You can also view the status page of haproxy by `http://172.17.0.1:8080/my-stats`
 
 ## References
 * <https://www.haproxy.com/blog/haproxy-on-docker-swarm-load-balancing-and-dns-service-discovery/>: Docker Swarm + Haproxy
